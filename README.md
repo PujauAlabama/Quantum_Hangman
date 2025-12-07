@@ -1,8 +1,8 @@
 # Quantum Hangman
 
-Welcome to **Quantum Hangman**!Game
+Welcome to **Quantum Hangman!** Game
 
-## Rules of the Game
+## Game Rules
 
 - It's a letter guessing game from a word randomly chosen from a list of word (that the player would obviously not be able to see)
 - You would be able to guess only one letter at a time and would have at most 6 wrong tries.
@@ -11,7 +11,7 @@ Welcome to **Quantum Hangman**!Game
 - If you would be able to finish guessing the word before 6 wrong tries get over, you win. Otherwise, you lose.
 - Beautiful <span style="color:orange; font-size:18px">interface</span>
 
-## Implementation using Qunatum Computing
+## Implementation Details
 - I have done this two ways, first using Grover's algoritm, second one is Post Quantum Encryption techniques.
 
 ### <ins>Method-I : Using Grover's Algoritm </ins>
