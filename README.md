@@ -58,7 +58,7 @@ $$
 
 See the [documentation](https://example.com/docs).
 
-![Logo](https://example.com/logo.png)
+![Logo](Message_Encryption_&_Decryption.png)
 
 > “This project is awesome!”  
 > — Someone Famous
