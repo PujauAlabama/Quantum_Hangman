@@ -52,7 +52,7 @@ $$
 - The encapsulate_letter() and decapsulate_and_decrypt_letter() function uses above functions and perform the letter encryption into Ciphertext and then decrypting them with right keys and guess letters (one at a time though).
 - The game would be realized as follows: Alice (the host) would be having the access to all the letters of the word as quantum states , therefore would be encrypting them using encapsulate_letter() function and Bob (the player) would be guessing one letter at a time that he would be passing on to Alice and then that would be used in decapsulate_and_decrypt_letter() function to derive recovered letter. The the recovered letter would be matched to guess letter in run_hangman() function, which will match provided the letter exists in the word, as there will already be an encryption for that letter, the letter would be revealed and we can go for next stage of the game. Taking a grong guess of letter would lead to a wrong aead_key, which would give AEAD failure.
   
-![PQCrypto Hangman Flowchart](images/Kyber_AEAD_Hangman_Flowchart.png)
+![PQCrypto Hangman Flowchart](Kyber_AEAD_Hangman_Flowchart.png)
 
 
 
