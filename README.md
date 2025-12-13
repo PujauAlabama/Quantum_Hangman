@@ -17,9 +17,9 @@ Welcome to **Quantum Hangman**!Game
 ### <ins>Method-I : Using Grover's Algoritm </ins>
 -  **Grover's Algorithm** is a quantum algorithm that helps to search for an elemnet from unstructured database of (N) entries, which is computationally faster than  any classical algorithm.
 - See the [documentation](https://en.wikipedia.org/wiki/Grover%27s_algorithm) for the core idea of this algorithm.
-- Firstly, to implemnet hangman game using above, we have to treat each letter of a word as a quantum state.
-- As in the hangman game, a player have to guess one letter among 26 english alphabets, we need atleast 26 states. But as the quantum states appears in numbers which are integral powers of 2 (E.g. N= 2,4,8,16,....., because of the binary feature of quantum states taking values either 0 or 1), I am considering 2^5=32 states, which would appear with letter_to_index conversion as 0 to 25 in python code for a to z (I would take .lower() for Capital letter input) and for 26 to 31 indices, I would opt for padding.
-- The inherent idea is , if the player gueesed correct letter then the state associated with that letter, would be inverted and amplified using Grover's algorithm. Because of which with proper number iteration of of amplifications, we can get maximum probability of the correctly guessed state and that would be revealed for all it's ocuurences.  But for the wrong guess though the state would be inverted, but there would be no amplification and no word would be revealed.
+- Firstly, to implemnet hangman game using above, we have to treat each letter of the given word as a quantum state.
+- As in the hangman game, a player have to guess one letter among 26 english alphabets, we need atleast 26 states. But as the quantum states appears in numbers which are integer exponent of 2 (E.g. N= 2,4,8,16,....., because of the binary feature of quantum states taking values either 0 or 1), we have to consider 2^5=32 states, which would appear with letter_to_index conversion as 0 to 25 in python code for a to z (I would take .lower() for Capital letter input) and for 26 to 31 indices, I would opt for padding.
+- The inherent idea is , if the player is able to guess correct letter, then the state associated with that letter, would be inverted and amplified using Grover's algorithm. Because of which, with proper number of iterations of amplification, we can get maximum probability of the correctly guessed state and that would be revealed for all it's ocuurences.  But for the wrong guess though the state would be inverted, but there would be no amplification and no word would be revealed.
 - The _build_diffuser_circuit() function will be the diffuser part amplifying the correctly gussed state using the reflection of the inverted state about the mean of all states.
 - The _backend_grover_sample() function will implement a quantum circuit for every guess and combine the state inverting Oracle part and Diffuser function. Besides that, it runs the quantum circuit and  transforms the states from bit-string binary format to index format using binary to decimal conversion and the registers the individual counts in a dictionary.
 - The quantum_measure() function keeps an track on which letters have been chosen, and whether the current guess is correct or not. Then it decides iteration number for diffuser amplification using formula,
@@ -35,7 +35,7 @@ $$
  
   
 
-  where M can take value is either 1 (correct guess) or 0 (wrong guess). Then it will calculate the probabilities for individual appearances by their number counts.
+  where M can take value either 1 (correct guess) or 0 (wrong guess). Then it will calculate the probabilities for individual appearances by their number counts.
 - The _print_counts_descending() function would print the individual count and their probability after performing it all in main function, where we can see the maximum probability is coming for the right guess.
 
 
