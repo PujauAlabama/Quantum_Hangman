@@ -56,16 +56,8 @@ $$
 
 
 
-See the [documentation](https://example.com/docs).
 
-![Logo](https://example.com/logo.png)
 
-> “This project is awesome!”  
-> — Someone Famous
 
-## How it works
 
-```python
-print("Hello, World!")
-```
 
