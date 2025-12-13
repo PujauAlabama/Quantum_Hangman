@@ -9,7 +9,7 @@ Welcome to **Quantum Hangman**!Game
 - Inially it starts with all dashed lines equal to the length of the word . Everytime you guess the correct letter, it shows up in all dashed spaces for all of it's occurences.
 - For each wrong number of tries keeps on decreasing.
 - If you would be able to finish guessing the word before 6 wrong tries get over, you win. Otherwise, you lose.
-- Beautiful <span style="color:orange; font-size:18px">interface</span>
+
 
 ## Implementation using Qunatum Computing
 - I have done this two ways, first using Grover's algoritm, second one is Post Quantum Encryption techniques.
@@ -35,7 +35,7 @@ $$
  
   
 
-  where M can value is either 1 (correct guess) or 0 (wrong guess). Then it will calculate the probabilities for individual appearances by their number counts.
+  where M can take value is either 1 (correct guess) or 0 (wrong guess). Then it will calculate the probabilities for individual appearances by their number counts.
 - The _print_counts_descending() function would print the individual count and their probability after performing it all in main function, where we can see the maximum probability is coming for the right guess.
 
 
